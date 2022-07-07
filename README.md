@@ -15,10 +15,6 @@ Create animated mockups from boring screen recordings in seconds, powered by Rea
 
 [![Recommended Video](https://user-images.githubusercontent.com/48997634/177479922-681278e9-4e13-450f-a6c8-c830d247c703.gif)](https://www.youtube.com/watch?v=SSNmU3FXW4s&ab_channel=MohitYadav)
 
-## 🎬 Templates
-
-Pckd comes with a bunch of templates. View the final renders here:
-
 ## Current Templates 🌈
 
 Mockoops comes with a bunch of templates right out of the box! They are very responsive, customisable and diversified for each of your motion-graphics video need. Some of them are here:
