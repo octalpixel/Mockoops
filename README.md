@@ -91,7 +91,7 @@ The videos will only render to an mp4 file if you have all of this set-up. Howev
 1. Setup an Object storage bucket with Linode or any other cloud provider.
 1. Rename the `.env.example` file to `.env`.
 1. Install packatges using `npm install`
-1. Follow the inst9allation instructions at [Remotion Lambda Installation docs](https://www.remotion.dev/docs/lambda/setup#1-install-remotionlambda), **till step 6** .
+1. Follow the installation instructions at [Remotion Lambda Installation docs](https://www.remotion.dev/docs/lambda/setup#1-install-remotionlambda), **till step 6** .
 1. Once you have the key ID and Secret from the lambda console, edit these values into the `.env` file along with other values.
 1. Verify `.env` setup using `npx remotion lambda policies validate`. Only proceed if you get checkmarks on everything, else repeat from step `4`.
 1. Edit your preferred regions in `src/deploy/regions.ts` file.
@@ -106,17 +106,13 @@ The videos will only render to an mp4 file if you have all of this set-up. Howev
 
 The software is published under the [`MIT` License](/LICENSE).
 
-## 🫡 Created for
-
-This project was submitted as a hackathon submission on the [Hashnode x Linode Hackathon](https://townhall.hashnode.com/build-with-linode-hackathon-june-2022)
-
-![Hackathon](https://user-images.githubusercontent.com/48997634/177483360-b3a75ac4-e5b3-40c7-abfa-08acd5edd1c9.png)
-
-
 ## 🌟 Support this project
 
 ![](https://user-images.githubusercontent.com/48997634/174794647-0c851917-e5c9-4fb9-bf88-b61d89dc2f4f.gif)
 
 ### [⏫⭐️ Scroll to the star button](#start-of-content)
 
-If you believe this project has potential, feel free to **star this repo** just like many [amazing people](/stargazers) have.
+If you believe this project has potential, feel free to **star this repo** just like many [amazing people](https://github.com/Just-Moh-it/Mockoops/stargazers) have.
+
+> **Note**
+> The was originally a hackathon project, and at the time, I was not a very experienced programmer (which is appearant with the usage of JS over TS). Apologies if the code is a bit messy. I'll be refactoring it soon.

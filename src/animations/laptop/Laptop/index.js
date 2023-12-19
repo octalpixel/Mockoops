@@ -7,6 +7,7 @@ import {
   Easing,
   Audio,
 } from "remotion";
+import videoUrls from "../../../utils/videoUrls";
 
 const Laptop = ({ video, audio, bgVideo }) => {
   const frame = useCurrentFrame();
@@ -77,20 +78,8 @@ const Laptop = ({ video, audio, bgVideo }) => {
   return (
     <AbsoluteFill>
       {/* Laptop Video */}
-      <Video
-        src={
-          bgVideo ||
-          "https://remotion.ap-south-1.linodeobjects.com/assetsproduction ID_4884237.mp4"
-        }
-        muted
-      />
-      <Audio
-        src={
-          audio ||
-          "https://remotion.ap-south-1.linodeobjects.com/assetssunset.mp3"
-        }
-        loop
-      />
+      <Video src={bgVideo || videoUrls.PRODUCTION_ID_37} muted />
+      <Audio src={audio || videoUrls.ASSETS_SUNRISE} loop />
 
       {/* Screen Video */}
       <AbsoluteFill
@@ -112,10 +101,7 @@ const Laptop = ({ video, audio, bgVideo }) => {
         }}
       >
         <Video
-          src={
-            video ||
-            "https://remotion.ap-south-1.linodeobjects.com/scenery.mp4"
-          }
+          src={video || videoUrls.ARVIN_LATIFI}
           style={{
             width: "100%",
             height: "100%",

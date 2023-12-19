@@ -1,5 +1,6 @@
 {
-  "name": "github-wrapped",
+  "name": "mockoops",
+  "author": "Mohit Yadav (@Just_Moh_it)",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,6 +15,7 @@
   },
   "dependencies": {
     "@aicore/linode-object-storage-lib": "^1.0.10",
+    "@builder.io/partytown": "^0.6.4",
     "@headlessui/react": "^1.6.4",
     "@react-hook/window-size": "^3.0.7",
     "@reduxjs/toolkit": "^1.8.2",
@@ -25,7 +27,6 @@
     "@shopify/react-shortcuts": "^5.0.1",
     "framer-motion": "^6.3.13",
     "get-blob-duration": "^1.2.0",
-    "js-file-downloader": "^1.1.24",
     "mongodb": "^4.7.0",
     "next": "12.0.7",
     "next-pwa": "^5.5.4",
@@ -33,14 +34,11 @@
     "react": "17.0.2",
     "react-aws-s3": "^1.5.0",
     "react-confetti": "^6.1.0",
-    "react-dat-gui": "^4.1.1",
     "react-dom": "17.0.2",
     "react-dropzone": "^14.2.1",
     "react-hot-toast": "^2.2.0",
     "react-lottie-player": "^1.4.3",
-    "react-stopwatch": "^2.0.4",
     "react-top-loading-bar": "^2.1.0",
-    "react-yandex-metrika": "^2.6.0",
     "recoil": "^0.7.4",
     "remotion": "^3.0.22",
     "sass": "^1.52.3",

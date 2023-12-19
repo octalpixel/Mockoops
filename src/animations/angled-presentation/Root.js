@@ -1,4 +1,5 @@
 import { Composition } from "remotion";
+import videoUrls from "../../utils/videoUrls";
 import AngledPresentation from "./AngledPresentation";
 
 export const Root = () => {
@@ -11,10 +12,9 @@ export const Root = () => {
       width={1066}
       height={600}
       defaultProps={{
-        bgVideo: "https://remotion.ap-south-1.linodeobjects.com/bg-v.mp4",
-        video: "https://remotion.ap-south-1.linodeobjects.com/jasdf.mp4",
-        audio:
-          "https://remotion.ap-south-1.linodeobjects.com/assets205Oc_MHyd0O0L8y.mp3",
+        bgVideo: videoUrls.PEXELS_ARTEM,
+        video: videoUrls.PROTOTYPR_RECORDING,
+        audio: videoUrls.PROTOTYPR_AUDIO,
       }}
     />
   );

@@ -1,4 +1,6 @@
 import AngledPresentation from "./AngledPresentation";
+import VideoUrls from "../../utils/videoUrls";
+import videoUrls from "../../utils/videoUrls";
 
 export const config = {
   id: "angled-presentation",
@@ -8,12 +10,9 @@ export const config = {
   fps: 30,
   template: AngledPresentation,
   defaultProps: {
-    bgVideo:
-      "https://remotion.ap-south-1.linodeobjects.com/bg-v.mp4",
-    video:
-      "https://remotion.ap-south-1.linodeobjects.com/jasdf.mp4",
-    audio:
-      "https://remotion.ap-south-1.linodeobjects.com/assets205Oc_MHyd0O0L8y.mp3",
+    bgVideo: VideoUrls.PEXELS_ARTEM,
+    video: VideoUrls.PROTOTYPR_RECORDING,
+    audio: VideoUrls.PROTOTYPR_AUDIO,
   },
   height: 600,
   width: 1066,
@@ -21,22 +20,19 @@ export const config = {
   inputPropsSchema: [
     {
       type: "file",
-      defaultValue:
-        "https://remotion.ap-south-1.linodeobjects.com/bg-v.mp4",
+      defaultValue: VideoUrls.PEXELS_ARTEM,
       name: "Background Video",
       key: "bgVideo",
     },
     {
       type: "file",
-      defaultValue:
-        "https://remotion.ap-south-1.linodeobjects.com/jasdf.mp4",
+      defaultValue: videoUrls.PROTOTYPR_RECORDING,
       name: "Video",
       key: "video",
     },
     {
       type: "file",
-      defaultValue:
-        "https://remotion.ap-south-1.linodeobjects.com/assets205Oc_MHyd0O0L8y.mp3",
+      defaultValue: videoUrls.PROTOTYPR_AUDIO,
       name: "Audio",
       key: "audio",
     },

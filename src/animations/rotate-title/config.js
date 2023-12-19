@@ -1,3 +1,4 @@
+import videoUrls from "../../utils/videoUrls";
 import { RotateTitle } from "./RotateTitle";
 
 export const config = {
@@ -8,7 +9,7 @@ export const config = {
   fps: 30,
   template: RotateTitle,
   defaultProps: {
-    title: "Mohit's Blog",
+    title: "New Website",
     subtitle: "Releasing today!",
   },
   height: 600,
@@ -17,7 +18,7 @@ export const config = {
   inputPropsSchema: [
     {
       type: "text",
-      defaultValue: "Mohit's Blog",
+      defaultValue: "My new Website",
       name: "Title Text",
       key: "title",
     },
@@ -29,15 +30,14 @@ export const config = {
     },
     {
       type: "file",
-      defaultValue:
-        "https://remotion.ap-south-1.linodeobjects.com/Screen Recording 2022-06-27 at 6.54.27 PM.mov",
+      defaultValue: videoUrls.ANGLED_SCREEN,
       name: "Video",
       key: "video",
     },
     {
       type: "file",
       defaultValue:
-        "https://remotion.ap-south-1.linodeobjects.com/ES_Come 2gether.mp3",
+        "https://dkihjuum4jcjr.cloudfront.net/ES_ITUNES/Come%202gether/ES_Come%202gether.mp3",
       name: "Audio",
       key: "audio",
     },

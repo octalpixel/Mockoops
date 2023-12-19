@@ -11,11 +11,13 @@ import Layout from "components/Layout";
 // 3rdP stuff
 import { motion } from "framer-motion";
 import { slap, fadeFromBottom } from "styles/animations";
+import { PlayBtn } from "icons";
 
 // States, Data
 import { homepageData } from "data";
 import { useRecoilState } from "recoil";
 import { modalState } from "state/global";
+import toast from "react-hot-toast";
 
 export default function Home() {
   const [modal, setModal] = useRecoilState(modalState);
@@ -84,7 +86,6 @@ export default function Home() {
             <Image
               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=351692&theme=light"
               alt="Mockoops - Create&#0032;jaw&#0045;dropping&#0032;animations&#0032;from&#0032;boring&#0032;screencasts | Product Hunt"
-              style="width: 250px; height: 54px;"
               width={250}
               height={54}
             />
@@ -120,13 +121,7 @@ export default function Home() {
             }}
           >
             <div className={styles.playBtn}>
-              <Image
-                src="/icons/play.png"
-                alt="play button"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-              ></Image>
+              <PlayBtn />
             </div>
             <video
               className={styles.video}

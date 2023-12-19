@@ -8,6 +8,7 @@ import {
   interpolate,
   Audio,
 } from "remotion";
+import videoUrls from "../../../utils/videoUrls";
 
 import {
   wrapperStyle,
@@ -48,16 +49,13 @@ export const RotateTitle = ({
       <Loop durationInFrames={145}>
         <Video
           style={backgroundVideoStyle}
-          src={
-            backgroundVideo ||
-            "https://remotion.ap-south-1.linodeobjects.com/production ID_4779866.mp4"
-          }
+          src={backgroundVideo || videoUrls.PRODUCTION_ID_66}
         />
       </Loop>
       <Audio
         src={
           audio ||
-          "https://remotion.ap-south-1.linodeobjects.com/ES_Come 2gether.mp3"
+          "https://dkihjuum4jcjr.cloudfront.net/ES_ITUNES/Come%202gether/ES_Come%202gether.mp3"
         }
       />
 
@@ -83,10 +81,7 @@ export const RotateTitle = ({
             <Video
               style={videoScreenStyle}
               startFrom={0}
-              src={
-                video ||
-                "https://remotion.ap-south-1.linodeobjects.com/Screen Recording 2022-06-27 at 6.54.27 PM.mov"
-              }
+              src={video || videoUrls.ANGLED_SCREEN}
               muted
             />
           </div>

@@ -1,3 +1,4 @@
+import videoUrls from "../../utils/videoUrls";
 import QuickTeaser from "./QuickTeaser";
 
 export const config = {
@@ -8,9 +9,8 @@ export const config = {
   fps: 30,
   template: QuickTeaser,
   defaultProps: {
-    video: "https://remotion.ap-south-1.linodeobjects.com/assetsfinal.mp4",
-    audio:
-      "https://remotion.ap-south-1.linodeobjects.com/assetsES_Love Me Back.mp3",
+    video: videoUrls.ASSETS_SUNRISE,
+    audio: videoUrls.ES_LOVE,
   },
   height: 1080,
   width: 1920,
@@ -18,17 +18,24 @@ export const config = {
   inputPropsSchema: [
     {
       type: "file",
-      defaultValue:
-        "https://remotion.ap-south-1.linodeobjects.com/assetsfinal.mp4",
+      defaultValue: videoUrls.ASSETS_FINAL,
       name: "Video",
       key: "video",
     },
     {
       type: "file",
-      defaultValue:
-        "https://remotion.ap-south-1.linodeobjects.com/assetsES_Love Me Back.mp3",
+      defaultValue: videoUrls.ES_LOVE,
       name: "Audio",
       key: "audio",
+    },
+    {
+      type: "number",
+      defaultValue: 30,
+      name: "Border Radius (px)",
+      key: "borderRadius",
+      step: 5,
+      min: 0,
+      max: 200,
     },
   ],
 };

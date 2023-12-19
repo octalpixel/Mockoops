@@ -7,59 +7,50 @@ import {
   Easing,
   Audio,
 } from "remotion";
+import videoUrls from "../../../utils/videoUrls";
+// import Confetti from "remotion-confetti";
 
-const QuickTeaser = ({ video, audio }) => {
+const QuickTeaser = ({ video, audio, text, isConfettiEnabled = true }) => {
   const frame = useCurrentFrame();
 
   const keyframes = {
     0: {
-      rotateX: 8,
-      rotateY: 20,
-      rotate: -5,
-      scale: 2,
-      translateX: 420,
-      translateY: 400,
-    },
-    30: {
-      rotateX: 8,
-      rotateY: 20,
-      rotate: -5,
-      scale: 2,
-      translateX: 450,
-      translateY: 150,
-    },
-    31: {
       rotateX: 0,
-      rotateY: -20,
+      rotateY: 0,
       rotate: 0,
-      scale: 1.8,
-      translateX: 10,
-      translateY: 150,
+      scale: 1.2,
+      translateX: 0,
+      translateY: 80,
+      easing: Easing.bezier(1, 0, 0, 0.5),
+      textOpacity: 0,
     },
-    90: {
-      rotateX: 0,
-      rotateY: -20,
-      rotate: 0,
-      scale: 1.8,
-      translateX: 10,
-      translateY: -170,
-    },
-    91: {
+    60: {
       rotateX: 0,
       rotateY: 0,
       rotate: 0,
       scale: 1.1,
       translateX: 0,
-      translateY: 60,
-      easing: Easing.bezier(0.09, 0, 0.02, 0.99),
+      translateY: 40,
+      easing: Easing.bezier(1, 0, 0, 0.5),
+      textOpacity: 0,
+    },
+    90: {
+      rotateX: 0,
+      rotateY: 0,
+      rotate: 0,
+      scale: 1.1,
+      translateX: 0,
+      translateY: 200,
+      textOpacity: 1,
     },
     180: {
       rotateX: 0,
       rotateY: 0,
       rotate: 0,
-      scale: 1,
+      scale: 1.1,
       translateX: 0,
-      translateY: 40,
+      translateY: 200,
+      textOpacity: 1,
     },
   };
 
@@ -112,15 +103,50 @@ const QuickTeaser = ({ video, audio }) => {
         perspective: "1200px",
       }}
     >
-      {/* QuickTeaser Video */}
+      <AbsoluteFill style={{ backgroundColor: "black" }}>
+        {/* Confetti, if enabled */}
+        {/* {isConfettiEnabled && (
+          <Confetti
+            particleCount={200}
+            startVelocity={50}
+            decay={1}
+            spread={360}
+            ticks={100}
+            gravity={0.5}
+            x={960}
+            y={360}
+            
+            scalar={1}
+            colors={["#000000", "#FFFFFF"]}
+          />
+        )} */}
+      </AbsoluteFill>
 
+      {/* Background audio */}
       <Audio
         src={
           audio ||
-          "https://remotion.ap-south-1.linodeobjects.com/assetsES_Love Me Back.mp3"
+          videoUrls.ES_LOVE
         }
         loop
       />
+
+      <AbsoluteFill
+        style={{
+          top: "80px",
+          right: "500px",
+          width: "100%",
+          height: "max-content",
+          textAlign: "center",
+          fontSize: "70px",
+          fontFamily: "'Helvetica', sans-serif",
+          fontWeight: "bold",
+          color: "#1d1e20",
+          opacity: currentFromKeyframe?.textOpacity,
+        }}
+      >
+        {text}
+      </AbsoluteFill>
 
       {/* Screen Video */}
       <AbsoluteFill
@@ -130,9 +156,9 @@ const QuickTeaser = ({ video, audio }) => {
           justifyContent: "center",
           boxShadow: "2px 2px 20px 5px rgba(0, 0, 0, .2)",
           transform: `
-          scale(${currentFromKeyframe?.scale ?? 1})
+          scale(${currentFromKeyframe?.scale ?? 1.1})
           translateX(${currentFromKeyframe?.translateX ?? 0}px)
-          translateY(${currentFromKeyframe?.translateY ?? 40}px)
+          translateY(${currentFromKeyframe?.translateY ?? 200}px)
           translateZ(${currentFromKeyframe?.translateZ ?? 0}px)
           rotateX(${currentFromKeyframe?.rotateX ?? 0}deg)
           rotateY(${currentFromKeyframe?.rotateY ?? 0}deg)
@@ -147,10 +173,10 @@ const QuickTeaser = ({ video, audio }) => {
           overflow: "hidden",
         }}
       >
-        <Video
+        {/* <Video
           src={
             video ||
-            "https://remotion.ap-south-1.linodeobjects.com/assetsfinal.mp4"
+            "https://pub-4bf634469b5c482e9546855c0abd7a17.r2.dev/Pckd-2+-Dashboard---Anime-3.mp4"
           }
           style={{
             width: "100%",
@@ -158,7 +184,7 @@ const QuickTeaser = ({ video, audio }) => {
             minWidth: "1400px",
           }}
           muted
-        />
+        /> */}
       </AbsoluteFill>
     </AbsoluteFill>
   );

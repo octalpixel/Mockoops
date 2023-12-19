@@ -3,8 +3,8 @@ const data = {
     headingItems: ["Drag.", "Edit.", "Done."],
     video: {
       preview: {
-        src: "https://remotion.ap-south-1.linodeobjects.com/Introducing Mockoops 📱 _ Create Mockups in seconds.mp4",
-        alt: "Video",
+        src: "https://pub-4bf634469b5c482e9546855c0abd7a17.r2.dev/Introducing%20Mockoops%20%F0%9F%93%B1%20_%20Create%20Mockups%20in%20seconds.mp4",
+        alt: "Introduction Video",
       },
       content: {
         type: "youtube",
@@ -26,7 +26,10 @@ const data = {
       author: {
         name: "Mohit Yadav",
         description: "Dev",
-        avatar: { src: "/assets/images/avatars/mohit.png", alt: "Mohit" },
+        avatar: {
+          src: "/assets/images/avatars/mohit.jpeg",
+          alt: "Mohit",
+        },
       },
       review:
         "I craved something that could make my boring screencasts share-worthy, while not having to install any heavy software. This app perfectly fits my needs... No fancy subscriptions too!",
@@ -35,7 +38,10 @@ const data = {
       author: {
         name: "Dhravya Shah",
         description: "Student",
-        avatar: { src: "/assets/images/avatars/dhravya.png", alt: "Dhravya" },
+        avatar: {
+          src: "/assets/images/avatars/dhravya.png",
+          alt: "Dhravya",
+        },
       },
       review:
         "Since I don't edit videos, and can't find any good tools on the internet to create mockups, this is literally perfect for all my needs. It also has a bunch of templates to choose from!",
@@ -44,7 +50,10 @@ const data = {
       author: {
         name: "Amit Wani",
         description: "SDE",
-        avatar: { src: "/assets/images/avatars/amit.png", alt: "Amit Wani" },
+        avatar: {
+          src: "https://pbs.twimg.com/profile_images/1532754122016956425/5wXFAIX7_400x400.jpg",
+          alt: "Amit Wani",
+        },
       },
       review:
         "When I first saw the trailer, I was blown away. The product turned out to be equally awesome. I guess I'll never upload plain screen-recordings to twitter ever again.",
@@ -58,7 +67,7 @@ const data = {
           "Add your boring screen-recordings to one of the beautiful templates and instantly make them a piece of art.",
       },
       video: {
-        src: "/assets/images/features/1.mp4",
+        src: "https://pub-4bf634469b5c482e9546855c0abd7a17.r2.dev/1.mp4",
         alt: "Drag-dropping into the video source",
       },
     },
@@ -70,7 +79,7 @@ const data = {
           "Beautifying a screen-recording to upload on twitter? Announcing a new app? We've got you covered",
       },
       video: {
-        src: "/assets/images/features/2.mp4",
+        src: "https://pub-4bf634469b5c482e9546855c0abd7a17.r2.dev/2.mp4",
         alt: "Scrolling through templates",
         loop: false,
       },
@@ -82,7 +91,7 @@ const data = {
           "Blazing fast serverless-based exports, with no watermarks. Preview in the browser and finalize anytime.",
       },
       video: {
-        src: "/assets/images/features/3.mp4",
+        src: "https://pub-4bf634469b5c482e9546855c0abd7a17.r2.dev/3.mp4",
         alt: "Showing the export process",
       },
     },
